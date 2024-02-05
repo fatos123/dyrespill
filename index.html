@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Åpne fil ved knappetrykk</title>
+    <style>
+        body {
+            background-image: url(funn.jpg);
+            background-repeat: no-repeat;
+            background-position: top;
+            background-size:cover ;
+            height: 1vh;
+            
+        
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30vh;
+            margin: 0;
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            background-color: #3498db;
+            color: #fbf8f8;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+        }
+
+        #bilde {
+            display: none;
+            width: 20%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="button-container">
+        <button class="button" onclick="openFile('ape1.jpg')">A</button>
+        <button class="button" onclick="openFile('bjørn1.jpg')">B</button>
+        <button class="button" onclick="openFile('Chilli.jpg')">C</button>
+        <button class="button" onclick="openFile('delfin.jpg')">D</button>
+        <button class="button" onclick="openFile('elefant1.jpg')">E</button>
+        <button class="button" onclick="openFile('frosk1.jpg')">F</button>
+        <button class="button" onclick="openFile('geko1.jpg')">G</button>
+        <button class="button" onclick="openFile('hest1.jpg')">H</button>
+        <button class="button" onclick="openFile('ilder1.jpg')">I</button>
+        <button class="button" onclick="openFile('jaguar1.jpg')">J</button>
+        <button class="button" onclick="openFile('katt1.jpg')">K</button>
+        <button class="button" onclick="openFile('leopard.jpg')">L</button>
+        <button class="button" onclick="openFile('marsvin.jpg')">M</button>
+        <button class="button" onclick="openFile('neshorn.jpg')">N</button>
+        <button class="button" onclick="openFile('Oter.jpg')">O</button>
+        <button class="button" onclick="openFile('panter.jpg')">P</button>
+        <button class="button" onclick="openFile('qualla.jpg')">Q</button>
+        <button class="button" onclick="openFile('rev.jpg')">R</button>
+        <button class="button" onclick="openFile('svane.jpg')">S</button>
+        <button class="button" onclick="openFile('tiger.jpg')">T</button>
+        <button class="button" onclick="openFile('ulv.jpg')">U</button>
+        <button class="button" onclick="openFile('valp.jpg')">v</button>
+        <button class="button" onclick="openFile('wc.jpg')">W</button>
+        <button class="button" onclick="openFile('xman.jpg')">x</button>
+        <button class="button" onclick="openFile('yogi.jpg')">Y</button>
+        <button class="button" onclick="openFile('zebra.jpg')">Z</button>
+        <button class="button" onclick="openFile('ærfugel.jpg')">Æ</button>
+        <button class="button" onclick="openFile('ørn.jpg')">ø</button>
+        <button class="button" onclick="openFile('ål.jpg')">Å</button>
+        
+    </div>
+
+
+
+    <img id="bilde">
+
+    <script>
+        function openFile(fileName) {
+            document.getElementById("bilde").src = fileName;
+            document.getElementById("bilde").style.display = "block";
+
+            // setTimeout(function() {
+            //     skjulBilde();
+            //     setTimeout(function() {
+            //         resetView();
+            //     }, 3000); 
+            // }, 3000); 
+        }
+
+        function skjulBilde() {
+            document.getElementById("bilde").style.display = "none";
+        }
+
+        function resetView() {
+           
+            alert("Resetting view to the four buttons");
+        }
+
+        function buttonClicked(letter) {
+            alert("You clicked button " + letter);
+        }
+    </script>
+</body>
+</html>
